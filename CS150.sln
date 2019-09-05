@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InchesToHeight", "Week 2\In
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DistancePerTank", "Week 2\DistancePerTank\DistancePerTank.vcxproj", "{E6E64327-FFD0-408C-9B18-31066AD7DEAC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "Week 1\Test\Test.vcxproj", "{91B39347-84B4-43DF-8552-AFC76577BF04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -55,6 +57,14 @@ Global
 		{E6E64327-FFD0-408C-9B18-31066AD7DEAC}.Release|x64.Build.0 = Release|x64
 		{E6E64327-FFD0-408C-9B18-31066AD7DEAC}.Release|x86.ActiveCfg = Release|Win32
 		{E6E64327-FFD0-408C-9B18-31066AD7DEAC}.Release|x86.Build.0 = Release|Win32
+		{91B39347-84B4-43DF-8552-AFC76577BF04}.Debug|x64.ActiveCfg = Debug|x64
+		{91B39347-84B4-43DF-8552-AFC76577BF04}.Debug|x64.Build.0 = Debug|x64
+		{91B39347-84B4-43DF-8552-AFC76577BF04}.Debug|x86.ActiveCfg = Debug|Win32
+		{91B39347-84B4-43DF-8552-AFC76577BF04}.Debug|x86.Build.0 = Debug|Win32
+		{91B39347-84B4-43DF-8552-AFC76577BF04}.Release|x64.ActiveCfg = Release|x64
+		{91B39347-84B4-43DF-8552-AFC76577BF04}.Release|x64.Build.0 = Release|x64
+		{91B39347-84B4-43DF-8552-AFC76577BF04}.Release|x86.ActiveCfg = Release|Win32
+		{91B39347-84B4-43DF-8552-AFC76577BF04}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +74,7 @@ Global
 		{6E47E31B-DFE5-463D-B7C6-442AB59CEA92} = {91046925-4DD9-4C87-907D-9488E3DB93AF}
 		{9F0744C5-9FE2-4FE0-B65E-9CA627B5534D} = {91046925-4DD9-4C87-907D-9488E3DB93AF}
 		{E6E64327-FFD0-408C-9B18-31066AD7DEAC} = {91046925-4DD9-4C87-907D-9488E3DB93AF}
+		{91B39347-84B4-43DF-8552-AFC76577BF04} = {78F9A9CC-782A-449E-86D8-0D8752F7872B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6330CD7D-6F95-4AC2-87D2-3C5552650324}
