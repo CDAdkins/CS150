@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{157B5F32-7E77-4152-9478-326C9CB3AC9C}</ProjectGuid>
+    <ProjectGuid>{9F0744C5-9FE2-4FE0-B65E-9CA627B5534D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>RestaurantBill</RootNamespace>
+    <RootNamespace>InchesToHeight</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -151,7 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="RestaurantBill.cpp" />
+    <ClCompile Include="InchesToHeight.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

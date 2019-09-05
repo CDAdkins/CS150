@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{60AADA6D-0786-42CE-BDD4-CABFE2A0464C}</ProjectGuid>
+    <ProjectGuid>{E6E64327-FFD0-408C-9B18-31066AD7DEAC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>InchestoHeight</RootNamespace>
+    <RootNamespace>DistancePerTank</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -151,7 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="InchesToHeight.cpp" />
+    <ClCompile Include="DistancePerTank.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

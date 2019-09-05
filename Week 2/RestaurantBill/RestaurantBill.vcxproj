@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{CF1CCD54-E24D-4A3F-9C1A-00C85FD9D86B}</ProjectGuid>
+    <ProjectGuid>{6E47E31B-DFE5-463D-B7C6-442AB59CEA92}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>DistancePerTank</RootNamespace>
+    <RootNamespace>RestaurantBill</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -151,7 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DistancePerTank.cpp" />
+    <ClCompile Include="RestaurantBill.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
