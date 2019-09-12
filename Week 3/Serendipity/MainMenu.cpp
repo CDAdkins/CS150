@@ -1,8 +1,29 @@
+/*	Serendipity Book Sellers Part 2
+	File Name:MainMenu.cpp
+	Programmer: Chris Adkins
+	Date Last Modified: 9/11/2019
+	CS 150 - Thursday 5:30PM
+
+	Problem Statement:
+	This program displays a main menu with
+	the ability to show several other sub menus.
+	As of right now there is some small logic 
+	used in order to allow the user to see every
+	different menu but no functionality beyond
+	that has been implemented yet.
+
+
+	Overall Plan:
+	1. Display the main menu to the user.
+	2. Check the users input to determine what to show next.
+	3. Display the proper menu in regards to the user's input.
+*/
+
 #include <iostream>
 using namespace std;
 
 int main() {
-	int choice;
+	int choice; // This value is set by the user when prompted.
 	cout << "Serendipity Booksellers\nMain Menu\n\n";
 	cout << "1. Cashier Module\n";
 	cout << "2. Inventory Database Module\n";
@@ -11,7 +32,7 @@ int main() {
 	cout << "5. Exit\n\n";
 	cout << "Enter your choice: ";
 	cin >> choice;
-	if (choice == 1) { //Shows the cashier dialogue.
+	if (choice == 1) { // Shows the cashier dialogue.
 		cout << "\nSerendipity Booksellers\n\nDate: ";
 		cout << "\n\nQty\tISBN\tTitle\t\tPrice\tTotal";
 		cout << "\n\n\n\t\tSubtotal\n\t\tTax\n\t\tTotal";
