@@ -1,4 +1,4 @@
-/*	Chapter No. 2 - Excercise No. 14
+/*	Chapter No. 2 - Exercise No. 14
 	File Name: InchesToHeight.cpp
 	Programmer: Chris Adkins
 	Date Last Modified: 9/5/2019

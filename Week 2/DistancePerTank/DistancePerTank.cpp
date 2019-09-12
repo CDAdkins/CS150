@@ -1,4 +1,4 @@
-/*	Chapter No. 2 - Excercise No. 6
+/*	Chapter No. 2 - Exercise No. 6
 	File Name: DistancePerTank.cpp
 	Programmer: Chris Adkins
 	Date Last Modified: 9/5/2019

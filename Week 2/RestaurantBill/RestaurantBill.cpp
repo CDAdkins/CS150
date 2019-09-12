@@ -1,4 +1,4 @@
-/*	Chapter No. 2 - Excercise No. 4
+/*	Chapter No. 2 - Exercise No. 4
 	File Name: RestaurantBill.cpp
 	Programmer: Chris Adkins
 	Date Last Modified: 9/5/2019
