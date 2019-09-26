@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BoxOffice", "Week 4\BoxOffi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PropertyTax", "Week 4\PropertyTax\PropertyTax.vcxproj", "{235DAAF3-FF58-422C-92CF-EEFBD82FB9FD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Week 5", "Week 5", "{93ED9712-0F03-4D9F-A309-23C747CDAC23}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
