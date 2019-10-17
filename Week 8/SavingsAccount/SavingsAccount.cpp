@@ -33,7 +33,7 @@ using namespace std;
 
 int main() {
 	double beginningBalance     = 0; // Balance at the beginning of the first month, never changes after being set.
-	double startingBalance      = 0; // Used to keep track of balance at beginning of each month.
+	double startingBalance      = 0; // Used to keep track of balance at the beginning of each month.
 	double endingBalance        = 0; // Used to keep track of the balance at the end of each month.
 	double annualInterestRate   = 0;
 	double monthlyInterestRate  = 0;
