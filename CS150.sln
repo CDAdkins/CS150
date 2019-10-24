@@ -45,6 +45,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SalesBarChart", "Week 8\Sal
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SavingsAccount", "Week 8\SavingsAccount\SavingsAccount.vcxproj", "{FFDE6242-6AE5-4C98-8949-48FB53A13AF3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Week 9", "Week 9", "{9EB82283-F0B0-44B5-9C4D-12E8B0F5129D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StudentLineUp", "Week 9\StudentLineUp\StudentLineUp.vcxproj", "{65942BBE-9671-458B-8816-15952E69B4F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -173,6 +177,14 @@ Global
 		{FFDE6242-6AE5-4C98-8949-48FB53A13AF3}.Release|x64.Build.0 = Release|x64
 		{FFDE6242-6AE5-4C98-8949-48FB53A13AF3}.Release|x86.ActiveCfg = Release|Win32
 		{FFDE6242-6AE5-4C98-8949-48FB53A13AF3}.Release|x86.Build.0 = Release|Win32
+		{65942BBE-9671-458B-8816-15952E69B4F3}.Debug|x64.ActiveCfg = Debug|x64
+		{65942BBE-9671-458B-8816-15952E69B4F3}.Debug|x64.Build.0 = Debug|x64
+		{65942BBE-9671-458B-8816-15952E69B4F3}.Debug|x86.ActiveCfg = Debug|Win32
+		{65942BBE-9671-458B-8816-15952E69B4F3}.Debug|x86.Build.0 = Debug|Win32
+		{65942BBE-9671-458B-8816-15952E69B4F3}.Release|x64.ActiveCfg = Release|x64
+		{65942BBE-9671-458B-8816-15952E69B4F3}.Release|x64.Build.0 = Release|x64
+		{65942BBE-9671-458B-8816-15952E69B4F3}.Release|x86.ActiveCfg = Release|Win32
+		{65942BBE-9671-458B-8816-15952E69B4F3}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -193,6 +205,7 @@ Global
 		{E78BF022-63C9-4C6E-8CDB-20CD1FC7F5ED} = {17BD49FF-5547-4AAD-AED0-8F9327E372E0}
 		{8CA03942-256C-405E-9B57-6E106F35F9E9} = {17BD49FF-5547-4AAD-AED0-8F9327E372E0}
 		{FFDE6242-6AE5-4C98-8949-48FB53A13AF3} = {17BD49FF-5547-4AAD-AED0-8F9327E372E0}
+		{65942BBE-9671-458B-8816-15952E69B4F3} = {9EB82283-F0B0-44B5-9C4D-12E8B0F5129D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6330CD7D-6F95-4AC2-87D2-3C5552650324}
