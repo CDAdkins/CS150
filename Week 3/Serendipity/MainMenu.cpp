@@ -1,7 +1,7 @@
-/*	Serendipity Book Sellers Part 4
+/*	Serendipity Book Sellers Part 5
 	File Name:MainMenu.cpp
 	Programmer: Chris Adkins
-	Date Last Modified: 10/9/2019
+	Date Last Modified: 10/23/2019
 	CS 150 - Thursday 5:30PM
 
 	Problem Statement:
@@ -10,15 +10,16 @@
 	As of right now there is some small logic 
 	used in order to allow the user to see every
 	different menu but no functionality beyond
-	that has been implemented yet. I have also added
-	some input validation to check to see if the user
-	enters a number outside the given parameters.
+	that has been implemented yet aside from the cashier module.
+	I have also added some input validation to check 
+	to see if the user enters a number outside the given parameters.
 
 
 	Overall Plan:
 	1. Display the main menu to the user.
 	2. Check the users input to determine what to show next.
-	3. Display the proper menu in regards to the user's input.
+	3. Display the proper menu in regards to the user's input using switch statements.
+	4. use while loops to validate the user's input.
 */
 
 #include <iostream>
@@ -28,16 +29,17 @@ using namespace std;
 
 int main() {
 
-	int         choice; // This value is set by the user when prompted.
-	int       numBooks;
-	string        date; // MM/DD/YY
-	string        isbn;
-	string   bookTitle;
-	float    bookPrice;
-	float        total;
-	float      taxPaid;
-	float     subTotal;
-	float taxRate = .1;
+	int          choice; // This value is set by the user when prompted.
+	int        numBooks;
+	string         date; // MM/DD/YY
+	string         isbn;
+	string    bookTitle;
+	float     bookPrice;
+	float         total;
+	float       taxPaid;
+	float      subTotal;
+	float  taxRate = .1;
+	bool   done = false;
 
 	cout << "Serendipity Booksellers\nMain Menu\n\n";
 	cout << "1. Cashier Module\n";
@@ -46,36 +48,41 @@ int main() {
 	cout << "4. Book Information\n";
 	cout << "5. Exit\n\n";
 	cout << "Enter your choice: ";
-	cin >> choice;
-	if (choice < 1 || choice > 5) {
-		cout << "\nPlease enter a number between 1 - 5.";
-	}
+	
+	do {
+		cout << "\nPlease enter a number between 1 - 5: ";
+		cin >> choice;
+	} while (choice < 1 || choice > 4);
 
 	switch (choice) {
 		case 1: { // Main Menu
-			cout << "\nPlease Enter The Date (MM/DD/YY): ";
-			cin >> date;
-			cout << "\nEnter the Title of the Book: ";
-			cin.ignore();
-			getline(cin, bookTitle);
-			cout << "\nEnter ISBN of the Book: ";
-			cin >> isbn;
-			cout << "\nHow many copies of the book will you be buying?: ";
-			cin >> numBooks;
-			cout << "\nHow much does the book cost?: $";
-			cin >> bookPrice;
+			do {
+				cout << "\nPlease Enter The Date (MM/DD/YY): ";
+				cin >> date;
+				cout << "\nEnter the Title of the Book: ";
+				cin.ignore();
+				getline(cin, bookTitle);
+				cout << "\nEnter ISBN of the Book: ";
+				cin >> isbn;
+				cout << "\nHow many copies of the book will you be buying?: ";
+				cin >> numBooks;
+				cout << "\nHow much does the book cost?: $";
+				cin >> bookPrice;
 
-			subTotal = numBooks * bookPrice;
-			taxPaid = subTotal * taxRate;
-			total = subTotal + taxPaid;
+				subTotal = numBooks * bookPrice;
+				taxPaid = subTotal * taxRate;
+				total = subTotal + taxPaid;
 
-			cout << "\nSerendipity Booksellers\n\n " << date;
-			cout << "\n\nQty\tISBN\t\tTitle\t\tPrice\tTotal";
-			cout << fixed;
-			cout << "\n\n" << numBooks << "\t" << isbn << "\t\t" << bookTitle << "\t$" << setprecision(2) << bookPrice << "\t$" << setprecision(2) << total;
-			cout << "\n\n\n\t\tSubtotal \t$" << setprecision(2) << subTotal;
-			cout << "\n\t\tTax \t$" << setprecision(2) << taxPaid;
-			cout << "\n\t\tTotal \t$" << setprecision(2) << total;
+				cout << "\nSerendipity Booksellers\n\n " << date;
+				cout << "\n\nQty\tISBN\t\tTitle\t\tPrice\tTotal";
+				cout << fixed;
+				cout << "\n\n" << numBooks << "\t" << isbn << "\t\t" << bookTitle << "\t$" << setprecision(2) << bookPrice << "\t$" << setprecision(2) << total;
+				cout << "\n\n\n\t\tSubtotal \t$" << setprecision(2) << subTotal;
+				cout << "\n\t\tTax \t$" << setprecision(2) << taxPaid;
+				cout << "\n\t\tTotal \t$" << setprecision(2) << total;
+				cout << "\n\nWould you like to process another transaction? (1 yes / 2 no): ";
+				cin >> choice;
+			} while (choice == 1);
 			cout << "\n\nThank You For Shopping Serendipity!";
 			break;
 		}
@@ -84,12 +91,12 @@ int main() {
 			cout << "\n\n1. Look-Up a Book\n2. Add a Book";
 			cout << "\n3. Edit a Book's Record\n4. Delete a Book";
 			cout << "\n5. Return to the Main Menu\n\nEnter Your Choice: ";
-			cin >> choice;
-			if (choice < 1 || choice > 5) {
-				cout << "\nPlease enter a number between 1 - 5.";
-			} else {
-				cout << "\nYou selected item " << choice;
-			}
+			do  {
+				cout << "\nPlease enter a number between 1 - 5: ";
+				cin >> choice;
+			} while (choice < 1 || choice > 4);
+			
+			cout << "\nYou selected item " << choice;
 			break;
 		}
 		case 3: {
@@ -98,12 +105,13 @@ int main() {
 			cout << "\n3. Inventory Retail Value\n4. Listing by Quanitity";
 			cout << "\n5. Listing by Cost\n6. Listing by Age\n7. Return to Main Menu";
 			cout << "\n\nEnter your choice: ";
-			cin >> choice;
-			if (choice < 1 || choice > 7) {
-				cout << "\nPlease enter a number between 1 - 7.";
-			} else {
-				cout << "\nYou selected item " << choice;
-			}
+			
+			do {
+				cout << "\nPlease enter a number between 1 - 7: ";
+				cin >> choice;
+			} while (choice < 1 || choice > 6);
+			cout << "\nYou selected item " << choice;
+			
 			break;
 		}
 		case 4: {
