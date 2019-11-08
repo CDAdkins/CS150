@@ -36,7 +36,11 @@ int main() {
 	
 	for (int i = 0; i < userInput; i++) {
 		file >> name;
-		cout << name << "\n";
+		if (i == 0) {
+			cout << "First: " << name << "\n";
+		} else if (i == userInput - 1) {
+			cout << "Last: " << name << "\n";
+		}
 	}
 	file.close();
 }
