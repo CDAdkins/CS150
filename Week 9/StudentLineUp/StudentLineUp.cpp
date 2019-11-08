@@ -13,7 +13,7 @@
 	1. Use ifstream to read in a txt file with the names.
 	2. get input from the user to decide how many names to read.
 	3. use the user input in the for loop.
-	4. print one name per loop.
+	4. Use an if - else to print the first and last name in the list.
 
 	Classes Needed and Purpose:
 	iostream for user input and output.
