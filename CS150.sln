@@ -63,6 +63,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Classwork", "Classwork", "{
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Functions", "Classwork\Functions\Functions.vcxproj", "{E2BD349C-7C5B-47C7-9928-3457447C6489}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Serendipity2", "Serendipity2\Serendipity2\Serendipity2.vcxproj", "{0D51067C-148D-4204-8D87-5AC71ABD43EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -239,6 +241,14 @@ Global
 		{E2BD349C-7C5B-47C7-9928-3457447C6489}.Release|x64.Build.0 = Release|x64
 		{E2BD349C-7C5B-47C7-9928-3457447C6489}.Release|x86.ActiveCfg = Release|Win32
 		{E2BD349C-7C5B-47C7-9928-3457447C6489}.Release|x86.Build.0 = Release|Win32
+		{0D51067C-148D-4204-8D87-5AC71ABD43EA}.Debug|x64.ActiveCfg = Debug|x64
+		{0D51067C-148D-4204-8D87-5AC71ABD43EA}.Debug|x64.Build.0 = Debug|x64
+		{0D51067C-148D-4204-8D87-5AC71ABD43EA}.Debug|x86.ActiveCfg = Debug|Win32
+		{0D51067C-148D-4204-8D87-5AC71ABD43EA}.Debug|x86.Build.0 = Debug|Win32
+		{0D51067C-148D-4204-8D87-5AC71ABD43EA}.Release|x64.ActiveCfg = Release|x64
+		{0D51067C-148D-4204-8D87-5AC71ABD43EA}.Release|x64.Build.0 = Release|x64
+		{0D51067C-148D-4204-8D87-5AC71ABD43EA}.Release|x86.ActiveCfg = Release|Win32
+		{0D51067C-148D-4204-8D87-5AC71ABD43EA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
