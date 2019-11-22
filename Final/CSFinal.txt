@@ -1,0 +1,17 @@
+CS 150 Final
+
+Text based dungeon crawler.
+
+Top down style map.
+
+Redraw with system("CLS")
+
+Player stats.
+
+Random hidden health potions.
+
+Difficulty based on board size (Maybe enemies scale with difficulty.
+	Smaller board = less enemies
+	Larger Boards = more enemies
+	
+When you kill all enemies you win!
