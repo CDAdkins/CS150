@@ -1,10 +1,9 @@
-#pragma once
 #include <iostream>
 #include <string>
 #include <conio.h>
-#include "Character.h"
-#include "Board.h"
-
+#include "Character.cpp"
+#include "Board.cpp"
+#pragma once
 
 using namespace std;
 
@@ -15,7 +14,7 @@ Board board;
 
 void moveCharacter(char key) {
 	switch (key) {
-	case 'w': 
+	case 'w':
 		player.moveUp();
 		break;
 
@@ -49,7 +48,7 @@ int main() {
 		board.drawMap(player, rat);
 		rat.chasePlayer(player);
 		moveCharacter(_getch());
-		
+
 	}
 }
 

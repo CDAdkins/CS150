@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{1BA27C46-F5DB-45B0-998D-9CB5DC1FA16B}</ProjectGuid>
+    <ProjectGuid>{1EB70BD8-928F-4B06-87C2-C98F76E3EEB9}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>RPG</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
@@ -152,12 +152,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Character.cpp" />
-    <ClCompile Include="RPG.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Board.h" />
-    <ClInclude Include="Character.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
