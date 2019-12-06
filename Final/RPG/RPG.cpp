@@ -49,6 +49,7 @@ int main() {
 		board.drawMap(player, rat);
 		rat.chasePlayer(player);
 		moveCharacter(_getch());
+		// if enemy overlaps with player call battle()
 		
 	}
 }

@@ -15,4 +15,5 @@ public:
 	Board();
 
 	void drawMap(Character player, Character enemy);
+	void drawBattle(Character player, Character enemy);
 };

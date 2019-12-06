@@ -29,5 +29,10 @@ void Board::drawMap(Character player, Character enemy) { // Maybe rename to redr
 		}
 		cout << "\n";
 	}
-	cout << "\nHealth: " << player.getHp();
+}
+
+void Board::drawBattle(Character player, Character enemy) {
+	for (int y = 0; y < height; y++) {
+		cout << "-";
+	}
 }
