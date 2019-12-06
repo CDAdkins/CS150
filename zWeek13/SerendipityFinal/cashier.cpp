@@ -1,13 +1,14 @@
-// Serendipity2.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+
 
 #include <iostream>
 #include <string>
-#include <cashier.h>
+#include <iomanip>
+#include "cashier.h"
+#include "bookdata.h"
 
 using namespace std;
 
-int Cashier::cashMain()
+void Cashier::cashMain()
 {
 	int        numBooks;
 	string         date; // MM/DD/YY
