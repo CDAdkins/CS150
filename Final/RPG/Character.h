@@ -5,6 +5,8 @@ using namespace std;
 class Character {
 private:
 
+	int xFromPlayer;
+	int yFromPlayer;
 	int strength; // How much damage you deal. (1-10)
 	int agility; // How well you can dodge. (1-10)
 	int speed;  // Decides who gets to attack first. (1-10)
@@ -25,6 +27,10 @@ public:
 
 	int getY();
 
+	int getXFromPlayer();
+
+	int getYFromPlayer();
+
 	int getHp();
 
 	int getStrength();
@@ -34,6 +40,10 @@ public:
 	int getSpeed();
 
 	char getIcon();
+
+	void setXFromPlayer(int x);
+
+	void setYFromPlayer(int y);
 
 	void moveUp();
 
@@ -46,6 +56,8 @@ public:
 	void moveRandom();
 
 	void chasePlayer(Character player);
+
+	void smartMove(Character player);
 
 	string whereAmI();
 };

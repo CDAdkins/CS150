@@ -14,5 +14,7 @@ private:
 public:
 	Board();
 
-	void drawMap(Character player, Character enemy);
+	int drawMap(Character player, Character enemy, Character coin, int level);
+
+	int drawMapImproved(Character player, Character enemies[], Character coin, int level);
 };

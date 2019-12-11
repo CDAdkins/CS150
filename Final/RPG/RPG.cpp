@@ -1,6 +1,8 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
+#include <cstdlib>
 #include <string>
+#include <time.h>
 #include <conio.h>
 #include "Character.h"
 #include "Board.h"
@@ -10,8 +12,11 @@ using namespace std;
 
 
 Character player; // Our player character
-Character rat(5, 5, 25, 1, 2, 3, 'R');
+Character enemy1(5, 5, 25, 1, 2, 3, '#');
+Character coin(10, 10, 1, 1, 1, 1, '@');
 Board board;
+
+Character enemies[100];
 
 void moveCharacter(char key) {
 	switch (key) {
@@ -44,12 +49,40 @@ void moveCharacter(char key) {
 	}
 }
 
-int main() {
-	while (true) {
-		board.drawMap(player, rat);
-		rat.chasePlayer(player);
-		moveCharacter(_getch());
-		
+int main(int level) {
+	srand(time(NULL));
+	int randNum = rand() % 10;
+
+	bool levelDone = false;
+
+	player = Character();
+
+	for (int i = 0; i < level; i++) {
+		int randNum = rand() % 10;
+		enemies[i] = Character(5, randNum, 5, 5, 5, 5, '#');
+	}
+	while (!levelDone) {
+		switch (board.drawMapImproved(player, enemies, coin, level)) {
+		case 0: // No contact is made
+			moveCharacter(_getch());
+			for (int i = 0; i < level; i++) {
+				enemies[i].smartMove(player);
+			}
+			break;
+
+		case 1: // Player is caught by enemy
+			// Replace map with 'YOU LOSE'
+			cout << "\nYou Lose\n";
+			cin.ignore();
+			levelDone = true;
+			break;
+
+		case 2: // Player gets coin
+			moveCharacter(_getch());
+			level++;
+			main(level);
+			break;
+		}
 	}
 }
 

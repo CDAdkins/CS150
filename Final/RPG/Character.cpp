@@ -3,6 +3,7 @@
 #include <string>
 #include <stdlib.h>
 #include <time.h>
+#include <iostream>
 
 
 
@@ -21,6 +22,8 @@ Character::Character() { // Change this to generate a random character.
 	agility = 5;
 	speed = 5;
 	icon = 'X';
+	xFromPlayer = 0;
+	yFromPlayer = 0;
 }
 
 Character::Character(int x, int y, int hp, int strength, int agility, int speed, char icon) {
@@ -31,6 +34,8 @@ Character::Character(int x, int y, int hp, int strength, int agility, int speed,
 	this->agility = agility;
 	this->speed = speed;
 	this->icon = icon;
+	xFromPlayer = 0;
+	yFromPlayer = 0;
 }
 
 int Character::getX() {
@@ -39,6 +44,14 @@ int Character::getX() {
 
 int Character::getY() {
 	return y;
+}
+
+int Character::getXFromPlayer() {
+	return xFromPlayer;
+}
+
+int Character::getYFromPlayer() {
+	return yFromPlayer;
 }
 
 int Character::getHp() {
@@ -59,6 +72,14 @@ int Character::getSpeed() {
 
 char Character::getIcon() {
 	return icon;
+}
+
+void Character::setXFromPlayer(int x) {
+	xFromPlayer = x;
+}
+
+void Character::setYFromPlayer(int y) {
+	yFromPlayer = y;
 }
 
 void Character::moveUp() {
@@ -111,17 +132,58 @@ void Character::moveRandom() { // Moves either up, down, left, right, or not at 
 void Character::chasePlayer(Character player) { // Should be used when enemy is near or can "see" player.
 	if (player.getX() < x) {
 		moveLeft();
-		return;
 	}
 	else if (player.getX() > x) {
 		moveRight();
-		return;
 	}
 	else if (player.getY() < y) {
 		moveUp();
 	}
 	else {
 		moveDown();
+	}
+}
+
+void Character::smartMove(Character player) {
+	srand(time(NULL));
+	int randNum = rand() % 4 + 1;
+	int xFromPlayer = abs(player.getX() - getX());
+	int yFromPlayer = abs(player.getY() - getY());
+
+	if (xFromPlayer <= 3 && yFromPlayer <= 3) {
+		if (player.getX() < x) {
+			moveLeft();
+			return;
+		}
+		else if (player.getX() > x) {
+			moveRight();
+			return;
+		}
+		else if (player.getY() < y) {
+			moveUp();
+		}
+		else {
+			moveDown();
+		}
+	} else {
+		
+
+		switch (randNum) { // Move Randomly
+		case 1:
+			moveUp();
+			break;
+		case 2:
+			moveDown();
+			break;
+		case 3:
+			moveLeft();
+			break;
+		case 4:
+			moveRight();
+			break;
+		default:
+			return;
+		}
 	}
 }
 
