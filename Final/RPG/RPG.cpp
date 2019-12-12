@@ -7,15 +7,11 @@
 #include "Character.h"
 #include "Board.h"
 
-
 using namespace std;
 
-
 Character player; // Our player character
-Character enemy1(5, 5, 25, 1, 2, 3, '#');
-Character coin(10, 10, 1, 1, 1, 1, '@');
+Character coin(10, 10, '@');
 Board board;
-
 Character enemies[100];
 
 void moveCharacter(char key) {
@@ -23,27 +19,21 @@ void moveCharacter(char key) {
 	case 'w': 
 		player.moveUp();
 		break;
-
 	case 'a':
 		player.moveLeft();
 		break;
-
 	case 's':
 		player.moveDown();
 		break;
-
 	case 'd':
 		player.moveRight();
 		break;
-
 	case 32: // player does not move, but the game continues.
 		break;
-
 	case 27:
 		cout << "\nClosing Game..."; // Press ESC to exit the game
 		exit(0);
 		break;
-
 	default: // If an unsupported key is pressed.
 		moveCharacter(_getch());
 	}
@@ -59,7 +49,7 @@ int main(int level) {
 
 	for (int i = 0; i < level; i++) {
 		int randNum = rand() % 10;
-		enemies[i] = Character(5, randNum, 5, 5, 5, 5, '#');
+		enemies[i] = Character(5, randNum, '#');
 	}
 	while (!levelDone) {
 		switch (board.drawMapImproved(player, enemies, coin, level)) {

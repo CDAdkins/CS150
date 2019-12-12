@@ -4,49 +4,14 @@
 #include "Character.h"
 #include "Board.h"
 
-
 using namespace std;
-
 
 Board::Board() {
 	height = 11;
 	width = 11;
 }
-																		  // Return: 0 = continue game; 1 = caught by enemy; 2 = coin grabbed.
-int Board::drawMap(Character player, Character enemy, Character coin, int level) { // Maybe rename to redraw and have it handle all UI stuff.
-	int xFromPlayer = abs(player.getX() - enemy.getX());
-	int yFromPlayer = abs(player.getY() - enemy.getY());
-	int xFromCoin = abs(player.getX() - coin.getX());
-	int yFromCoin = abs(player.getY() - coin.getY());
 
-	system("CLS");
-	for (int y = 0; y < height; y++) {
-		for (int x = 0; x < width; x++) {
-			if (x == player.getX() && y == player.getY()) {
-				cout << "[X]";
-			}
-			else if (x == enemy.getX() && y == enemy.getY()) {
-				cout << "[" << enemy.getIcon() << "]";
-			} else if (x == coin.getX() && y == coin.getY()) {
-				cout << "[" << coin.getIcon() << "]";
-				
-			} else {
-				cout << "[ ]";
-			}
-		}
-		cout << "\n";
-		cout << "Level: " << level;
-	}
-	if (xFromCoin == 0 && yFromCoin == 0) { // If coin gets grabbed
-		return 2;
-	} else if (xFromPlayer == 0 && yFromPlayer == 0) { // If player is caught by enemy
-		return 1;
-	} else { // If no contact happens
-		return 0;
-	}
-}
-
-int Board::drawMapImproved(Character player, Character enemies[], Character coin, int level) {
+int Board::drawMapImproved(Character player, Character enemies[], Character coin, int level) { 
 	int xFromCoin = abs(player.getX() - coin.getX());
 	int yFromCoin = abs(player.getY() - coin.getY());
 
@@ -65,7 +30,6 @@ int Board::drawMapImproved(Character player, Character enemies[], Character coin
 					enemySpace = true;
 				}
 			}
-
 			if (enemySpace == true) {
 				cout << "[" << '#' << "]";
 			} else if (x == player.getX() && y == player.getY()) {
@@ -76,26 +40,21 @@ int Board::drawMapImproved(Character player, Character enemies[], Character coin
 			} else {
 				cout << "[ ]";
 			}
-
-			
 		}
 		cout << "\n";
 	}
 	cout << "\nLevel: " << level;
 
+	// Return: 0 = continue game; 1 = caught by enemy; 2 = coin grabbed
 	for (int i = 0; i < level; i++) {
 		if (enemies[i].getXFromPlayer() == 0 && enemies[i].getYFromPlayer() == 0) { // If player is caught by enemy
-			cout << "\nPLAYER CAUGHT";
 			return 1;
 		}
 	}
-
 	if (xFromCoin == 0 && yFromCoin == 0) { // If coin gets grabbed
-		cout << "\nCOIN GRABBED";
 		return 2;
 	}
 	else { // If no contact happens
-		cout << "\nNO CONTACT";
 		return 0;
 	}
 
